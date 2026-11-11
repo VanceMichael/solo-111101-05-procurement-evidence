@@ -1,0 +1,16 @@
+{
+  "name": "aliases",
+  "run_id": "run-aliases",
+  "sources": [
+    "/mail/one",
+    "/mail/two"
+  ],
+  "options": {
+    "aliases": {
+      "B-001": "B001",
+      "B001": "B001"
+    }
+  },
+  "fixture_root": "fixtures",
+  "portal_database": "portal.sqlite3"
+}

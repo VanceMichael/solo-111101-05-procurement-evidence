@@ -1,0 +1,16 @@
+{
+  "name": "revoked",
+  "run_id": "run-revoked",
+  "sources": [
+    "/mail/one",
+    "/revocations"
+  ],
+  "options": {
+    "aliases": {
+      "B-001": "B001"
+    },
+    "as_of": "2026-11-12"
+  },
+  "fixture_root": "fixtures",
+  "portal_database": "portal.sqlite3"
+}

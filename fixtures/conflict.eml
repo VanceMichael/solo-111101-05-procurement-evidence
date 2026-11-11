@@ -1,0 +1,16 @@
+MIME-Version: 1.0
+Message-ID: <conflict@supplier.invalid>
+X-Supplier: S1
+X-Batch: B001
+Content-Type: multipart/mixed; boundary="synthetic"
+
+--synthetic
+Content-Type: text/plain; charset=utf-8
+
+Synthetic supplier export.
+--synthetic
+Content-Type: application/json
+Content-Disposition: attachment; filename="certificate.json"
+
+{"manufacturer": "Maker-B", "certificate": "CERT-X"}
+--synthetic--

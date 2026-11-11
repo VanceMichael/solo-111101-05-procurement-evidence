@@ -1,0 +1,16 @@
+MIME-Version: 1.0
+Message-ID: <revocations@supplier.invalid>
+X-Supplier: S1
+X-Batch: B-001
+Content-Type: multipart/mixed; boundary="synthetic"
+
+--synthetic
+Content-Type: text/plain; charset=utf-8
+
+Synthetic supplier export.
+--synthetic
+Content-Type: application/json
+Content-Disposition: attachment; filename="certificate.json"
+
+{"manufacturer": "Maker-A", "certificate": "CERT-1", "revoked_at": "2026-11-10"}
+--synthetic--

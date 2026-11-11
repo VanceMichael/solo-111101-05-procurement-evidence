@@ -1,0 +1,29 @@
+{
+  "/mail/one": [
+    {
+      "status": 200,
+      "file": "one.eml",
+      "headers": {
+        "ETag": "v1"
+      }
+    }
+  ],
+  "/mail/two": [
+    {
+      "status": 200,
+      "file": "two.eml"
+    }
+  ],
+  "/mail/conflict": [
+    {
+      "status": 200,
+      "file": "conflict.eml"
+    }
+  ],
+  "/revocations": [
+    {
+      "status": 200,
+      "file": "revocations.eml"
+    }
+  ]
+}

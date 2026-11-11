@@ -1,0 +1,16 @@
+MIME-Version: 1.0
+Message-ID: <one@supplier.invalid>
+X-Supplier: S1
+X-Batch: B-001
+Content-Type: multipart/mixed; boundary="synthetic"
+
+--synthetic
+Content-Type: text/plain; charset=utf-8
+
+Synthetic supplier export.
+--synthetic
+Content-Type: application/json
+Content-Disposition: attachment; filename="certificate.json"
+
+{"manufacturer": "Maker-A", "certificate": "CERT-1", "issued_at": "2026-10-01", "receipt": "IN-1", "use": "USE-1", "accepted_at": "2026-11-01", "result": "accepted"}
+--synthetic--

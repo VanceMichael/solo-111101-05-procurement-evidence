@@ -1,0 +1,102 @@
+[
+  {
+    "name": "aliases",
+    "run_id": "run-aliases",
+    "sources": [
+      "/mail/one",
+      "/mail/two"
+    ],
+    "options": {
+      "aliases": {
+        "B-001": "B001",
+        "B001": "B001"
+      }
+    },
+    "expected": {
+      "batches": [
+        {
+          "supplier": "S1",
+          "batch": "B001",
+          "documents": 2
+        }
+      ],
+      "archives": 2
+    }
+  },
+  {
+    "name": "collision",
+    "run_id": "run-collision",
+    "sources": [
+      "/mail/one",
+      "/mail/conflict"
+    ],
+    "options": {
+      "aliases": {
+        "B-001": "B001",
+        "B001": "B001"
+      }
+    },
+    "expected": {
+      "quarantine": [
+        {
+          "reason": "manufacturer_conflict"
+        }
+      ],
+      "batches": [
+        {
+          "supplier": "S1",
+          "batch": "B001",
+          "documents": 1
+        }
+      ]
+    }
+  },
+  {
+    "name": "revoked",
+    "run_id": "run-revoked",
+    "sources": [
+      "/mail/one",
+      "/revocations"
+    ],
+    "options": {
+      "aliases": {
+        "B-001": "B001"
+      },
+      "as_of": "2026-11-12"
+    },
+    "expected": {
+      "affected": [
+        {
+          "receipt": "IN-1",
+          "use": "USE-1"
+        }
+      ],
+      "decisions": [
+        {
+          "receipt": "IN-1",
+          "accepted_at": "2026-11-01",
+          "result": "accepted"
+        }
+      ],
+      "current_valid": false
+    }
+  },
+  {
+    "name": "historical",
+    "run_id": "run-historical",
+    "sources": [
+      "/mail/one",
+      "/revocations"
+    ],
+    "options": {
+      "aliases": {
+        "B-001": "B001"
+      },
+      "as_of": "2026-11-02"
+    },
+    "expected": {
+      "current_valid": true,
+      "affected": []
+    }
+  }
+]

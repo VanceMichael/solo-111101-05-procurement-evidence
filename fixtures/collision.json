@@ -1,0 +1,16 @@
+{
+  "name": "collision",
+  "run_id": "run-collision",
+  "sources": [
+    "/mail/one",
+    "/mail/conflict"
+  ],
+  "options": {
+    "aliases": {
+      "B-001": "B001",
+      "B001": "B001"
+    }
+  },
+  "fixture_root": "fixtures",
+  "portal_database": "portal.sqlite3"
+}
